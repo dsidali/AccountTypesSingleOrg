@@ -18,3 +18,11 @@ const credential = new AuthorizationCodeCredential(
 const authProvider = new TokenCredentialAuthenticationProvider(credential, {
     scopes: ["User.Read"]
 });
+
+
+
+const client = Client.initWithMiddleware({
+    debugLogging: true,
+    authProvider
+    // Use the authProvider object to create the class.
+});
